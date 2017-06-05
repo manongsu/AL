@@ -3,7 +3,7 @@
 .xxw_message li img{width:32px;height:32px;float: left;margin:16px 12px 0;}
 .xxw_message li h3{float: left;height: 14px;font-size: 14px;line-height: 14px;margin: 16px 0 11px;}
 .xxw_message li h3 p{float: left;}
-.xxw_message li h3 span{float:left;font-size: 9px;line-height:9px;padding: 1.5px 8px;border: 1px solid #999;color: #999;margin-left: 8.5px;}
+.xxw_message li h3 span{float:left;font-size: 9px;line-height:12px;padding: 1.5px 8px;border: 1px solid #999;color: #999;margin-left: 8.5px;}
 .xxw_message li a>p{float:left;width:95px;font-size: 11px;line-height:11px;color: #999;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .xxw_message li i{position:absolute;top:0;right:12px;font-size: 16px;color: #999;line-height: 67px;}
 .xxw_message li .xxw_border{width: 1px;height:100%;background-color: #eee;position: absolute;top:0;right:0;}
