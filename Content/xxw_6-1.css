@@ -24,7 +24,7 @@
 .xxw_lessonMsg li.xxw_live .xxw_detail .xxw_des{float:left;color: #999;font-size: 11px;line-height: 11px;margin-bottom: 0.861rem;width: 65%;}
 .xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play{position:absolute;top:50%;right:0.694rem;margin-top:-14px;}
 .xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play img{float: right;height: 12px;margin: 8px 0 0 8px;}
-.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play p{float: right;width: 70px;font-size: 11px;line-height: 14px;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play p{float: right;width: 75px;font-size: 11px;line-height: 14px;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name{width: 70%;height: 16px;font-size: 16px;line-height: 16px;margin-bottom: 0.611rem;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name img{height: 16px;margin-right: 0.5rem;float: left;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_time{width: 70%;height:11px;color: #999;font-size: 11px;line-height: 11px;margin-bottom: 0.806rem;}
@@ -35,7 +35,11 @@
 .xxw_btnGroup .xxw_share img{height: 1.222rem;}
 .xxw_btnGroup .xxw_stu{margin-right: 1px;}
 .xxw_btnGroup .xxw_stu,.xxw_editLes{width: 42.5%;float: left;background-color: #ff6000;color: #fff;text-align: center;line-height: 2.444rem;font-size: 18px;}
-
+.xxw_act{height: 2.444rem;width: 100%;border-top:1px solid #eee;background-color: #ff6000;}
+.xxw_act form{width: 65.3%;height:1.75rem;margin:0.347rem 0 0.347rem 5.9%;background-color: #fff;float: left;}
+.xxw_act form img{height: 0.97rem;vertical-align: middle;margin:0.425rem 0.3rem;}
+.xxw_act form input{height: 0.97rem;padding:0 0.3rem;width:82%;font-size: 12px;}
+.xxw_addLesson{width: 28.8%;height:2.444rem;font-size:18px;text-align: center;line-height:2.444rem;color: #fff;float: left;}
 
 
 
