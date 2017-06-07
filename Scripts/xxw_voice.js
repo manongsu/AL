@@ -44,6 +44,8 @@ $(function () {
                 },50000)
             },500);
         }
+        e.preventDefault();
+        return false;
     });
     $(".xxw_voice p").on('touchmove',function(e){
         var $touch = e.originalEvent.targetTouches[0];
