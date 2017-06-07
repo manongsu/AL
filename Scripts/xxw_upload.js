@@ -5,7 +5,7 @@ function xxw_setImagePreviews() {
         $(".xxw_uploadBtn").css("display","none");
     }
     var docObj = document.getElementById("xxw_input");
-    var html = '<div class="xxw_uploadImg"><img id="img'+$index+'" src=""/><i class="fa fa-close"></i></div>';
+    var html = '<div class="xxw_uploadImg"><img id="img'+$index+'" src=""/><i><img src="../Images/6-6/xxw_close.png" alt=""></i></div>';
     $(".xxw_upload").append(html);
     $(".xxw_uploadImg").css("height",$(".xxw_uploadImg").css("width"));
     var imgObjPreview = document.getElementById("img"+$index);

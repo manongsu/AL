@@ -13,7 +13,7 @@ $(function () {
     }
     function success() {
         $(".xxw_voice ul").css("display","block");
-        $(".xxw_voice ul").append('<li><img src="../Images/6-6/xxw_listen.png" alt=""/><i class="fa fa-close"></i></li>');
+        $(".xxw_voice ul").append('<li><img src="../Images/6-6/xxw_listen.png" alt=""/><i><img src="../Images/6-6/xxw_close.png" alt=""></i></li>');
         if($(".xxw_voice ul li").length==5){
             $(".xxw_voice p").css({
                 "color":"#999",
