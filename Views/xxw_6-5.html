@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>6-5</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../Content/xxw_common.css"/>
+    <link rel="stylesheet" href="../Content/xxw_6-5.css"/>
+    <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
+</head>
+<body>
+<ul class="xxw_newLesson">
+    <li><span>单节名称</span><input type="text" placeholder="请输入40字以内" maxlength="40" value="我是单节名称我是单节名称"/></li>
+    <li><span>单节时间</span><input value="2017/04/22" readonly="" name="xxw_date" class="xxw_date" type="text" placeholder="请选择"/></li>
+    <li><span>选择课程模式</span><input type="text" value="视频直播" readonly=""/></li>
+    <li><span>开始时间</span><input value="2017/04/28 20:00" readonly="" name="xxw_dateTime" class="xxw_dateTime" type="text" placeholder="请选择"/></li>
+    <li><span>直播讲师</span><i class="fa fa-angle-right"></i><input value="张老师" readonly="" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
+</ul>
+<div>
+    <div class="xxw_operateBtn">
+        <img src="../Images/6-5/xxw_folderAct.png" alt=""/><p style="color: #ff6000;">上传资料</p>
+    </div>
+    <ul class="xxw_folder xxw_List">
+        <li class="active">
+            <h3><img src="../Images/6-5/xxw_ppt.png" alt=""/>比多比少问题讲义</h3>
+            <p>2017/04/21  11:12  1.2M</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <div></div>
+        </li>
+        <li>
+            <h3><img src="../Images/6-5/xxw_ppt.png" alt=""/>比多比少问题讲义</h3>
+            <p>2017/04/21  11:12  1.2M</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <div></div>
+        </li>
+    </ul>
+    <div class="xxw_operateBtn" style="border-bottom: 1px solid #eee;margin-bottom:0;">
+        <img src="../Images/6-5/xxw_homework.png" alt=""/><p>创建作业</p>
+    </div>
+    <ul class="xxw_List">
+        <li>
+            <h3><img src="../Images/6-5/xxw_img.png" alt=""/><img src="../Images/6-5/xxw_voice.png" alt=""/>比多比少问题讲义</h3>
+            <p>2017/04/21  11:12  1.2M</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+        </li>
+    </ul>
+    <div class="xxw_operateBtn">
+        <img src="../Images/6-5/xxw_answer.png" alt=""/><p>设置答题卡</p>
+    </div>
+    <ul class="xxw_answer xxw_List">
+        <li>
+            <h3>1、选择题（多选）</h3>
+            <p>2017/04/21  11:12</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <img class="xxw_top" src="../Images/6-5/xxw_top.png" alt=""/>
+        </li>
+        <li>
+            <h3>2、选择题2</h3>
+            <p>2017/04/21  11:12</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <img class="xxw_top" src="../Images/6-5/xxw_top.png" alt=""/>
+        </li>
+        <li>
+            <h3>3、选择题3</h3>
+            <p>2017/04/21  11:12</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <img class="xxw_top" src="../Images/6-5/xxw_top.png" alt=""/>
+        </li>
+        <li>
+            <h3>4、选择题4</h3>
+            <p>2017/04/21  11:12</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <img class="xxw_top" src="../Images/6-5/xxw_top.png" alt=""/>
+        </li>
+        <li>
+            <h3>5、选择题5</h3>
+            <p>2017/04/21  11:12</p>
+            <img class="xxw_delete" src="../Images/6-5/xxw_delete.png" alt=""/>
+            <img class="xxw_top" src="../Images/6-5/xxw_top.png" alt=""/>
+        </li>
+    </ul>
+</div>
+<button style="background-color:#dfdfdf;color: #999;">删除本节<p style="font-size:9px;">(不可恢复)</p></button>
+<button>确定</button>
+<script type="text/javascript" src="../Scripts/jquery.1.9.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+       $(".xxw_top").click(function () {
+           var $index = $(this).parent().index();
+           $(this).parent().insertBefore($(".xxw_answer li").eq($index-1));
+       });
+    });
+</script>
+</body>
+</html>

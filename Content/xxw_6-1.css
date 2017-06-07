@@ -28,7 +28,7 @@
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name{width: 70%;height: 16px;font-size: 16px;line-height: 16px;margin-bottom: 0.611rem;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name img{height: 16px;margin-right: 0.5rem;float: left;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_time{width: 70%;height:11px;color: #999;font-size: 11px;line-height: 11px;margin-bottom: 0.806rem;}
-.xxw_lessonMsg li.xxw_data .xxw_detail i{position: absolute;top:50%;right:0.694rem;display:block;height:16px;font-size: 22px;line-height: 16px;color: #999;margin-top: -8px;color: #ff6000;}
+.xxw_lessonMsg li.xxw_data .xxw_detail i{position: absolute;top:50%;right:0.694rem;display:block;height:16px;font-size: 22px;line-height: 16px;margin-top: -8px;color: #ff6000;}
 .xxw_lessonMsg li.xxw_data .xxw_detail .xxw_personNum{position: absolute;top:50%;right:1.694rem;display:block;height:16px;font-size: 11px;line-height: 16px;color: #ff6000;margin-top: -8px;color: #ff6000;}
 .xxw_btnGroup{height: 2.444rem;width: 100%;border-top:1px solid #eee;background-color: #fff;}
 .xxw_btnGroup .xxw_share{width: 14.5%;float: left;text-align: center;margin-top: 0.611rem;}
@@ -40,14 +40,3 @@
 .xxw_act form img{height: 0.97rem;vertical-align: middle;margin:0.425rem 0.3rem;}
 .xxw_act form input{height: 0.97rem;padding:0 0.3rem;width:82%;font-size: 12px;}
 .xxw_addLesson{width: 28.8%;height:2.444rem;font-size:18px;text-align: center;line-height:2.444rem;color: #fff;float: left;}
-
-
-
-
-
-
-
-
-
-
-

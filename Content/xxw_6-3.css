@@ -1,0 +1,18 @@
+.xxw_newLesson{margin: 0.555rem 0;background-color: #fff;}
+.xxw_newLesson>li{height: 2.417rem;border-bottom: 1px solid #eee;padding: 0 0.667rem;line-height: 2.427rem;}
+.xxw_newLesson>li>span{font-size: 16px;}
+.xxw_newLesson>li>input{float:right;width:144px;height: 1.017rem;font-size: 12px;margin-top: 0.7rem;text-align: right;padding-right:0.972rem;margin-right:0.416rem;}
+.xxw_newLesson>li>i{float:right;font-size: 22px;line-height: 2.427rem;color: #999;}
+li.xxw_lessonType{height: auto;padding: 0.778rem 0.667rem 0.667rem;}
+li.xxw_lessonType>p{font-size: 16px;line-height: 16px;margin-bottom: 0.667rem;}
+li.xxw_lessonType>p span{font-size: 12px;color: #999;}
+li.xxw_lessonType ul{overflow: hidden;}
+li.xxw_lessonType li{float:left;width: 32.8%;height: 8.278rem;border: 1px solid #eee;text-align: center;}
+li.xxw_lessonType li.active{border: 1px solid #ff6000;}
+li.xxw_lessonType li img{width:85%;margin-top: 0.444rem;float: left;margin-left: 7.5%;}
+li.xxw_lessonType li h4{font-size: 15px;line-height:15px;margin:0.417rem 0;float: left;width: 100%;font-weight: normal;}
+li.xxw_lessonType li p{font-size: 11px;line-height:11px;float: left;width: 100%;color: #999;}
+.xxw_operateBtn{background-color: #fff;height: 3.889rem;text-align: center;margin-bottom: 0.555rem;}
+.xxw_operateBtn img{height: 1.167rem;margin: 0.75rem auto 0.5rem;}
+.xxw_operateBtn p{font-size: 14px;line-height: 14px;color: #999;}
+button{width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;}
