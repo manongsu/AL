@@ -1,4 +1,10 @@
 *{margin: 0;padding: 0;border:none;font-family:Helvetica,"Microsoft YaHei";color: #333;}
+* {
+    -webkit-touch-callout:none;
+    -moz-touch-callout:none;
+    -ms-touch-callout:none;
+    touch-callout:none;
+}
 ul,ol,li{list-style:none;}
 a{text-decoration:none;color: #333;}
 html{width: 100%;}
