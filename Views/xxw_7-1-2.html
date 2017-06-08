@@ -53,11 +53,13 @@
             var status = 0;/*用于判断滑块的位置，0为底部，1为中间*/
             /*手指按下*/
             $(".xxw_slider").on('touchstart',function(e){
+                e.preventDefault();
                 var $touch = e.originalEvent.targetTouches[0];
                 y1= $touch.pageY;
             });
             /*按下并移动*/
             $(".xxw_slider").on('touchmove',function(e){
+                e.preventDefault();
                 var $touch = e.originalEvent.targetTouches[0];
                 var y2 = $touch.pageY;
                 var distance = y1-y2;
@@ -113,6 +115,7 @@
                 $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+"px");
             }
             $(".xxw_slider").on('touchend',function(e){
+                e.preventDefault();
                 if(status == 0){
                     if(flag==0){
                         status0($(this),300);
