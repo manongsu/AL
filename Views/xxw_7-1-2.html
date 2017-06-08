@@ -112,7 +112,9 @@
                 $("article").animate({
                     "height":totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
                 },time);
-                $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+"px");
+                $(".xxw_question").animate({
+                    "height":14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
+                },time);
             }
             $(".xxw_slider").on('touchend',function(e){
                 e.preventDefault();
