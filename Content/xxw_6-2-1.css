@@ -1,0 +1,26 @@
+.xxw_content{background-color: #fff;overflow: hidden;padding-top: 1.111rem}
+.xxw_content .xxw_title{position: relative;padding-left:0.694rem;}
+.xxw_content .xxw_title h2{font-size: 16px;line-height: 16px;}
+.xxw_content .xxw_title p{font-size: 12px;line-height: 12px;color: #666;padding: 0.611rem 0;margin-left: 2.861rem;border-bottom: 1px solid #eee;}
+.xxw_content .xxw_title i{position: absolute;top:0;right:0.694rem;display:block;height:16px;font-size: 22px;line-height: 16px;color: #999;}
+.xxw_lessonMsg li{padding-left:0.694rem;overflow: hidden;}
+.xxw_lessonMsg li p.xxw_type{float:left;width: 1.778rem;height: 1.778rem;text-align: center;line-height: 1.778rem;font-size: 13px;color: #fff;border-radius: 4px;margin-right: 1.083rem;margin-top: 0.694rem;}
+.xxw_lessonMsg li .xxw_detail{border-bottom: 1px solid #eee;overflow: hidden;position: relative;padding-top: 0.694rem;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_name{float:left;font-size: 16px;line-height:16px;margin-bottom: 0.444rem;width: 65%;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_name img{height: 16px;margin-right: 0.5rem;float: left;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_person{float:left;overflow: hidden;color: #999;font-size: 11px;line-height: 0.889rem;margin-bottom: 0.361rem;width: 65%;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_person img{float:left;width: 0.889rem;height: 0.889rem;margin-right: 0.444rem;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_des{float:left;color: #999;font-size: 11px;line-height: 11px;margin-bottom: 0.861rem;width: 65%;margin-left: 1.5rem;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play{position:absolute;top:50%;right:0.694rem;margin-top:-14px;}
+.xxw_lessonMsg li.xxw_live .xxw_detail .xxw_play p{float: right;width: 75px;font-size: 11px;line-height: 14px;color: #999;}
+.xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name{width: 70%;height: 16px;font-size: 16px;line-height: 16px;margin-bottom: 0.611rem;}
+.xxw_lessonMsg li.xxw_data .xxw_detail .xxw_name img{height: 16px;margin-right: 0.5rem;float: left;}
+.xxw_lessonMsg li.xxw_data .xxw_detail .xxw_time{width: 70%;height:11px;color: #999;font-size: 11px;line-height: 11px;margin-bottom: 0.806rem;}
+.xxw_lessonMsg li.xxw_data .xxw_detail i{position: absolute;top:50%;right:0.694rem;display:block;height:16px;font-size: 22px;line-height: 16px;margin-top: -8px;color: #ff6000;}
+.xxw_lessonMsg li.xxw_data .xxw_detail .xxw_personNum{position: absolute;top:50%;right:1.694rem;display:block;height:16px;font-size: 11px;line-height: 16px;color: #ff6000;margin-top: -8px;color: #ff6000;}
+
+.xxw_btns{ overflow: hidden;padding: 0.667rem 0;background-color: #fff;margin-top: 0.555rem;}
+.xxw_btns li{float: left;width:33%;height: 2.555rem;text-align: center;border-right: 1px solid #eee;}
+.xxw_btns li img{height: 48%;margin-bottom: 0.444rem;}
+.xxw_btns li p{color: #999;font-size: 14px;line-height: 14px;}
+.xxw_btns li:last-child{border-right: none;}

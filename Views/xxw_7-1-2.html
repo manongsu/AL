@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>7-1-2</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../Content/xxw_common.css"/>
+    <link rel="stylesheet" href="../Content/xxw_7-1-2.css"/>
+    <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
+
+</head>
+<body>
+<article>
+    <p>昂立是上海昂立教育培训有限公司旗下专业为沪上3-18岁青少年提供英语语言培训服务的品牌。旗下教育产品涵盖幼儿园、少儿、中学生、昂立是上海昂立教育培训有限公司旗下专业为沪上3-18岁青少年提供英语语言培训服务的品牌。旗下教育产品涵盖幼儿园、少儿、中学生、</p>
+    <img src="../Images/7-2/xxw_hwImg.png" alt=""/>
+    <img src="../Images/7-2/xxw_hwImg.png" alt=""/>
+    <img src="../Images/7-2/xxw_hwImg.png" alt=""/>
+    <img src="../Images/7-2/xxw_hwImg.png" alt=""/>
+    <ul class="xxw_voice">
+        <li><img src="../Images/6-6/xxw_listen.png" alt=""/></li>
+        <li><img src="../Images/6-6/xxw_listen.png" alt=""/></li>
+        <li><img src="../Images/6-6/xxw_listen.png" alt=""/></li>
+        <li><img src="../Images/6-6/xxw_listen.png" alt=""/></li>
+        <li><img src="../Images/6-6/xxw_listen.png" alt=""/></li>
+    </ul>
+    <div class="xxw_slider">
+        <div class="xxw_btn">
+            <img class="xxw_circle" src="../Images/7-2/xxw_circle.png" alt=""/>
+            <img class="xxw_towards" src="../Images/7-2/xxw_top.png" alt=""/>
+        </div>
+        <p class="xxw_tips">请向上拨动此处进行答题</p>
+        <p>按照老师指定的出题顺序依次作答</p>
+    </div>
+</article>
+<div class="xxw_question">
+
+</div>
+<a href="" class="edit">编辑</a>
+<script type="text/javascript" src="../Scripts/jquery.1.9.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        /*根据屏幕的高度设置article的高度*/
+        var totalHeight = $("body").height()-$(".edit").height()-parseInt($("article").css("paddingTop").replace("px","")*2);
+        $("article").css("height",totalHeight);
+        /*拖动指定块*/
+        function xxw_slider() {
+            var y1;
+            var flag = 0;/*用于判断滑动的距离, 大于50为1,小于等于为0*/
+            var status = 0;/*用于判断滑块的位置，0为底部，1为中间*/
+            /*手指按下*/
+            $(".xxw_slider").on('touchstart',function(e){
+                var $touch = e.originalEvent.targetTouches[0];
+                y1= $touch.pageY;
+            });
+            /*按下并移动*/
+            $(".xxw_slider").on('touchmove',function(e){
+                var $touch = e.originalEvent.targetTouches[0];
+                var y2 = $touch.pageY;
+                var distance = y1-y2;
+                var bottom;
+                if(status == 0){
+                    /*向上滑动*/
+                    if(y2<y1){
+                        if(distance<=50){
+                            flag = 0;
+                            bottom = 2.444*parseInt($("body").css("fontSize").replace("px",""))+distance;
+                            $(this).css("bottom",bottom+"px");
+                            $("article").css("height",totalHeight-distance);
+                            $(".xxw_question").css("height",distance);
+                        }else if(distance>50){
+                            flag = 1;
+                        }
+                    }
+                }else if(status == 1){
+                    /*向下滑动*/
+                    if(y2>y1){
+                        if(distance>=-50){
+                            flag = 0;
+                            bottom = 16.91*parseInt($("body").css("fontSize").replace("px",""))+distance;
+                            $(this).css("bottom",bottom+"px");
+                            $("article").css("height",totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))-distance);
+                            $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+distance);
+                        }else if(distance<-50){
+                            flag = 1;
+                        }
+                    }
+                }
+            });
+            /*滑块运动到0状态*/
+            function status0($this,time) {
+                $this.animate({
+                    "bottom":"2.444rem"
+                },time);
+                $("article").animate({
+                    "height":totalHeight
+                },time);
+                $(".xxw_question").animate({
+                    "height":"0px"
+                },time);
+            }
+            /*滑块运动到1状态*/
+            function status1($this,time) {
+                $this.animate({
+                    "bottom":"16.91rem"
+                },time);
+                $("article").animate({
+                    "height":totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
+                },time);
+                $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+"px");
+            }
+            $(".xxw_slider").on('touchend',function(e){
+                if(status == 0){
+                    if(flag==0){
+                        status0($(this),300);
+                    }else if(flag==1){
+                        status1($(this),1000)
+                        flag = 0;status = 1;
+                    }
+                }else if(status == 1){
+                    if(flag==0){
+                        status1($(this),300);
+                    }else if(flag==1){
+                        status0($(this),1000);
+                        flag = 0;status = 0;
+                    }
+                }
+            })
+        }
+        xxw_slider();
+    })
+</script>
+</body>
+</html>

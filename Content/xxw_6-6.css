@@ -24,6 +24,4 @@ form textarea{background-color: #fff;font-size: 14px;padding: 0.305rem 0.667rem;
 .xxw_countdown h3{height:100px;font-size: 100px;color: #fff;font-weight: normal;line-height: 100px;margin: 10px 0;}
 .xxw_countdown h3 span{font-size: 36px;color: #fff;}
 .xxw_countdown p{height:14px;font-size: 14px;line-height: 14px;color: #fff;}
-
-
-button{position:fixed;bottom:0;left:0;width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;}
+a.edit{display: block;position:fixed;bottom:0;left:0;width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;text-align: center;line-height: 2.444rem;}
