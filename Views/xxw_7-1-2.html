@@ -67,26 +67,26 @@
                 if(status == 0){
                     /*向上滑动*/
                     if(y2<y1){
-                        if(distance<=50){
+                        if(distance<=5){
                             flag = 0;
                             bottom = 2.444*parseInt($("body").css("fontSize").replace("px",""))+distance;
                             $(this).css("bottom",bottom+"px");
                             $("article").css("height",totalHeight-distance);
                             $(".xxw_question").css("height",distance);
-                        }else if(distance>50){
+                        }else if(distance>5){
                             flag = 1;
                         }
                     }
                 }else if(status == 1){
                     /*向下滑动*/
                     if(y2>y1){
-                        if(distance>=-50){
+                        if(distance>=-5){
                             flag = 0;
                             bottom = 16.91*parseInt($("body").css("fontSize").replace("px",""))+distance;
                             $(this).css("bottom",bottom+"px");
                             $("article").css("height",totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))-distance);
                             $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+distance);
-                        }else if(distance<-50){
+                        }else if(distance<-5){
                             flag = 1;
                         }
                     }
