@@ -1,5 +1,8 @@
+*{
+    -webkit-overflow-scrolling: touch;
+}
 html,body{height: 100%;}
-article{padding: 0.333rem 0.611rem;font-size: 0;overflow: auto;-webkit-overflow-scrolling: touch;}
+article{padding: 0.333rem 0.611rem;font-size: 0;overflow: auto;}
 article p{font-size: 14px;line-height: 1.444rem;}
 article>img{margin: 0.333rem 0;width: 100%;}
 .xxw_voice{height:1.389rem;margin-top: 0.333rem;margin-bottom: 2.777rem;}
