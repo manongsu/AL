@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>18-2-6</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../Content/xxw_common.css"/>
+    <link rel="stylesheet" href="../Content/xxw_18-2-2.css"/>
+    <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
+</head>
+<body>
+<ul class="xxw_tabList">
+    <li class="active">
+        <p>数据总览</p>
+    </li>
+    <li>
+        <p>渠道数据</p>
+    </li>
+    <div></div>
+</ul>
+<div class="xxw_contentList">
+    <h3>访客数据</h3>
+    <ul>
+        <li style="width: 100%;padding: 0 0 0.667rem;">
+            <p>N<span>人</span></p>
+            <p class="xxw_type">独立访客</p>
+        </li>
+        <div style="padding: 0 0.667rem;">
+            <li>
+                <p>N<span>人</span></p>
+                <p class="xxw_type">入班人数</p>
+                <div style="position: absolute;top:50%;right:0;width: 1px;height: 1.5rem;margin-top: -0.75rem;background-color: #eee;"></div>
+            </li>
+            <li>
+                <p>N<span>%</span></p>
+                <p class="xxw_type">课程目录</p>
+            </li>
+        </div>
+
+    </ul>
+    <h3 style="padding-top:0.667rem;margin-top: 0.555rem;">教学质量</h3>
+    <ul>
+        <div style="padding: 0 0.667rem;">
+            <li>
+                <p>N<span>人</span></p>
+                <p class="xxw_type">资料数量</p>
+                <div style="position: absolute;top:50%;right:0;width: 1px;height: 1.5rem;margin-top: -0.75rem;background-color: #eee;"></div>
+            </li>
+            <li>
+                <p>N<span>人</span></p>
+                <p class="xxw_type">作业数量</p>
+            </li>
+            <li>
+                <p>N<span>%</span></p>
+                <p class="xxw_type">作业提交率</p>
+                <div style="position: absolute;top:50%;right:0;width: 1px;height: 1.5rem;margin-top: -0.75rem;background-color: #eee;"></div>
+            </li>
+            <li>
+                <p>N<span>%</span></p>
+                <p class="xxw_type">作业正确率</p>
+            </li>
+        </div>
+
+    </ul>
+    <div class="xxw_charts" style="margin-bottom: 0.444rem;">
+        <h4>资料&作业数量</h4>
+        <p>每节课资料&作业的答题卡数量</p>
+        <div class="xxw_tips">
+            <span></span><a>资料</a>
+            <span style="background-color:#ff6000;"></span><a>作业</a>
+        </div>
+        <div class="xxw_dataShow" id="xxw_percent"></div>
+    </div>
+    <div class="xxw_charts">
+        <h4>提交率</h4>
+        <p>每节课作业提交人数占全班学生数的比例</p>
+        <div class="xxw_dataShow" id="xxw_apply"></div>
+    </div>
+    <div class="xxw_charts">
+        <h4>正确率</h4>
+        <p>每节课作业的正确率</p>
+        <div class="xxw_dataShow" id="xxw_listen"></div>
+    </div>
+</div>
+<script src="../Scripts/echarts.js"></script>
+<script src="../Scripts/xxw_lines_18-2-6.js"></script>
+<script src="../Scripts/jquery.1.9.1.js"></script>
+<script>
+    $(".xxw_tabList li").click(function () {
+        /*效果*/
+        $(this).addClass("active").siblings("li").removeClass("active");
+        $(".xxw_tabList div").animate({
+            "left":$(this).index()*50+"%"
+        },300);
+        /*切换*/
+        $(".xxw_contentList").eq($(this).index()).css("display","block").siblings(".xxw_contentList").css("display","none")
+    });
+</script>
+</body>
+</html>

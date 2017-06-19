@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>13-1</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../Content/xxw_common.css"/>
+    <link rel="stylesheet" href="../Content/xxw_13-1.css"/>
+    <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
+</head>
+<body>
+<ul class="xxw_tabList">
+    <li class="active">
+        <p>已反馈<span>(7/12)</span></p>
+    </li>
+    <li>
+        <p>未反馈<span>(7/12)</span></p>
+    </li>
+    <div></div>
+</ul>
+<div class="xxw_contentList">
+    <ul class="xxw_workList">
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">已反馈</p>
+                <p class="xxw_time">2017/01/01 00:00</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">已反馈</p>
+                <p class="xxw_time">2017/01/01 00:00</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">已反馈</p>
+                <p class="xxw_time">2017/01/01 00:00</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">已反馈</p>
+                <p class="xxw_time">2017/01/01 00:00</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">已反馈</p>
+                <p class="xxw_time">2017/01/01 00:00</p>
+            </div>
+        </li>
+    </ul>
+    <img class="xxw_no" src="../Images/13-1/xxw_no.png" alt="">
+</div>
+<div style="display: none;" class="xxw_contentList">
+    <ul class="xxw_workList">
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">反馈</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">反馈</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">反馈</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">反馈</p>
+            </div>
+        </li>
+        <li>
+            <img src="../Images/13-1/xxw_teacherPhoto.png " alt="">
+            <div>
+                <p class="xxw_name">张三</p>
+                <i class="fa fa-angle-right"></i>
+                <p class="xxw_mark">反馈</p>
+            </div>
+        </li>
+    </ul>
+    <img class="xxw_no" src="../Images/13-1/xxw_no2.png" alt="">
+</div>
+<script src="../Scripts/jquery.1.9.1.js"></script>
+<script>
+    $(".xxw_tabList li").click(function () {
+        /*效果*/
+        $(this).addClass("active").siblings("li").removeClass("active");
+        $(".xxw_tabList div").animate({
+            "left":$(this).index()*50+"%"
+        },300);
+        /*切换*/
+        $(".xxw_contentList").eq($(this).index()).css("display","block").siblings(".xxw_contentList").css("display","none")
+    });
+</script>
+</body>
+</html>

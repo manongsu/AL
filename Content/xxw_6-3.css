@@ -8,6 +8,7 @@ li.xxw_lessonType>p{font-size: 16px;line-height: 16px;margin-bottom: 0.667rem;}
 li.xxw_lessonType>p span{font-size: 12px;color: #999;}
 li.xxw_lessonType ul{overflow: hidden;}
 li.xxw_lessonType li{float:left;width: 32.8%;height: 8.278rem;border: 1px solid #eee;text-align: center;}
+li.xxw_lessonType li:nth-child(1){border-right: none;border-left: none;}
 li.xxw_lessonType li.active{border: 1px solid #ff6000;}
 li.xxw_lessonType li img{width:85%;margin-top: 0.444rem;float: left;margin-left: 7.5%;}
 li.xxw_lessonType li h4{font-size: 15px;line-height:15px;margin:0.417rem 0;float: left;width: 100%;font-weight: normal;}

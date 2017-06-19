@@ -10,15 +10,16 @@
     <meta name="Description" content=""/>
     <link rel="stylesheet" href="../Content/xxw_common.css"/>
     <link rel="stylesheet" href="../Content/xxw_6-5.css"/>
+    <link rel="stylesheet" href="../Content/xxw_date.css"/>
     <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
 </head>
 <body>
 <ul class="xxw_newLesson">
     <li><span>单节名称</span><input type="text" placeholder="请输入40字以内" maxlength="40" value="我是单节名称我是单节名称"/></li>
-    <li><span>单节时间</span><input value="2017/04/22" readonly="" name="xxw_date" class="xxw_date" type="text" placeholder="请选择"/></li>
+    <li><span>单节时间</span><input value="2017-04-22" readonly="" name="xxw_date" class="xxw_date" type="text" placeholder="请选择" id="xxw_date"/></li>
     <li><span>选择课程模式</span><input type="text" value="视频直播" readonly=""/></li>
-    <li><span>开始时间</span><input value="2017/04/28 20:00" readonly="" name="xxw_dateTime" class="xxw_dateTime" type="text" placeholder="请选择"/></li>
-    <li><span>直播讲师</span><i class="fa fa-angle-right"></i><input value="张老师" readonly="" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
+    <li><span>开始时间</span><input value="2017-04-28 20:22" readonly="" name="xxw_dateTime" class="xxw_dateTime" type="text" placeholder="请选择" id="xxw_dateTime"></li>
+    <li><span>直播讲师</span><i class="fa fa-angle-right"></i><input value="张老师" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
 </ul>
 <div>
     <div class="xxw_operateBtn">
@@ -93,6 +94,23 @@
            var $index = $(this).parent().index();
            $(this).parent().insertBefore($(".xxw_answer li").eq($index-1));
        });
+    });
+</script>
+<script src="../Scripts/xxw_date.js"></script>
+<script type="text/javascript">
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#xxw_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': '2050-12-31' //最大日期
+    });
+    var calendardatetime = new LCalendar();
+    calendardatetime.init({
+        'trigger': '#xxw_dateTime',
+        'type': 'datetime',
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': '2050-12-31' //最大日期
     });
 </script>
 </body>

@@ -16,12 +16,13 @@ li.xxw_lessonType li p{font-size: 11px;line-height:11px;float: left;width: 100%;
 .xxw_operateBtn img{height: 1.167rem;margin: 0.75rem auto 0.5rem;}
 .xxw_operateBtn p{font-size: 14px;line-height: 14px;color: #999;}
 .xxw_folder{margin-bottom: 0.555rem;}
-.xxw_folder li.active div{position: absolute;top:0;left:0;background-color: #08bb07;width: 13.69rem;height: 4px;}
+.xxw_folder li.active div{position: absolute;top:0;left:0;background-color: #08bb07;width: 13.69rem;height: 2px;}
 .xxw_List li{height: 2.834rem;background-color: #fff;padding: 1.027rem 0.667rem 0;border-bottom: 1px solid #eee;position: relative;}
-.xxw_List li h3{float:left;font-size: 16px;line-height: 16px;margin-bottom:0.389rem;width: 80%;}
+.xxw_List li h3{float:left;font-size: 16px;line-height: 16px;margin-bottom:0.389rem;width: 80%;font-weight: normal;}
 .xxw_List li h3 img{height: 16px;float: left;margin-right: 0.555rem;}
 .xxw_List li p{float:left;font-size: 11px;line-height: 11px;color: #999;width: 80%;}
 .xxw_List li img.xxw_delete{height: 1.222rem;position: absolute;top:50%;right:0.667rem;margin-top: -0.611rem;}
 .xxw_List li img.xxw_top{height: 1.222rem;position: absolute;top:50%;right:3.5rem;margin-top: -0.611rem;}
 .xxw_List li:first-child img.xxw_top{display: none;}
+.xxw_answer{margin-bottom: 1.111rem;}
 button{float:left;width: 50%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;}

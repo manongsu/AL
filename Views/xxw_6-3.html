@@ -10,19 +10,17 @@
     <meta name="Description" content=""/>
     <link rel="stylesheet" href="../Content/xxw_common.css"/>
     <link rel="stylesheet" href="../Content/xxw_6-3.css"/>
+    <link rel="stylesheet" href="../Content/xxw_date.css"/>
     <link rel="stylesheet" href="../font/xxw_font-awesome.min.css"/>
-    <link rel="stylesheet" href="../Content/mobiscroll.css">
-    <link rel="stylesheet" href="../Content/mobiscroll_002.css">
-    <link rel="stylesheet" href="../Content/mobiscroll_003.css">
 </head>
 <body>
 <ul class="xxw_newLesson">
     <li><span>单节名称</span><input type="text" placeholder="请输入40字以内" maxlength="40"/></li>
-    <li><span>单节时间</span><input value="" readonly="" name="xxw_date" class="xxw_date" type="text" placeholder="请选择"/></li>
+    <li><span>单节时间</span><input value="" readonly="" name="xxw_date" class="xxw_date" id="xxw_date" type="text" placeholder="请选择" data-lcalendar="2016-05-11,2016-05-11"/></li>
     <li class="xxw_lessonType">
         <p>选择课程模式<span>(确定后就不能变更咯)</span></p>
         <ul>
-            <li style="border-right: none;">
+            <li>
                 <img src="../Images/6-3/xxw_hope.png" alt=""/>
                 <h4 style="color: #999;">录播</h4>
                 <p>上传录播视频</p>
@@ -32,14 +30,14 @@
                 <h4>视频直播</h4>
                 <p>视频直播为主</p>
             </li>
-            <li style="border-left: none;">
+            <li>
                 <img src="../Images/6-3/xxw_doc.png" alt=""/>
                 <h4>文档附件</h4>
                 <p>上传文档为主</p>
             </li>
         </ul>
     </li>
-    <li><span>开始时间</span><i class="fa fa-angle-right"></i><input value="" readonly="" name="xxw_dateTime" class="xxw_dateTime" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
+    <li><span>开始时间</span><i class="fa fa-angle-right"></i><input value="" readonly="" name="xxw_dateTime" class="xxw_dateTime" id="xxw_dateTime" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
     <li><span>上传录播视频</span><i class="fa fa-angle-right"></i><input readonly="" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
     <li><span>直播讲师</span><i class="fa fa-angle-right"></i><input readonly="" type="text" placeholder="请选择" style="margin-right: 0;"/></li>
 </ul>
@@ -55,37 +53,61 @@
     </div>
 </div>
 <button>确定</button>
-
 <script src="../Scripts/jquery.1.9.1.js"></script>
-<script src="../Scripts/mobiscroll_002.js" type="text/javascript"></script>
-<script src="../Scripts/mobiscroll_004.js" type="text/javascript"></script>
-<script src="../Scripts/mobiscroll.js" type="text/javascript"></script>
-<script src="../Scripts/mobiscroll_003.js" type="text/javascript"></script>
-<script src="../Scripts/mobiscroll_005.js" type="text/javascript"></script>
+<script src="../Scripts/xxw_date.js"></script>
 <script type="text/javascript">
-    $(function () {
-        var currYear = (new Date()).getFullYear();
-        var opt={};
-        opt.date = {preset : 'date'};
-        opt.datetime = {preset : 'datetime'};
-        opt.time = {preset : 'time'};
-        opt.default = {
-            theme: 'android-ics light', //皮肤样式
-            display: 'modal', //显示方式
-            mode: 'scroller', //日期选择模式
-            dateFormat: 'yyyy-mm-dd',
-            lang: 'zh',
-            showNow: true,
-            nowText: "今天",
-            startYear: currYear - 10, //开始年份
-            endYear: currYear + 10 //结束年份
-        };
-        $(".xxw_date").mobiscroll($.extend(opt['date'], opt['default']));
-        var optDateTime = $.extend(opt['datetime'], opt['default']);
-        var optTime = $.extend(opt['time'], opt['default']);
-        $(".xxw_dateTime").mobiscroll(optDateTime).datetime(optDateTime);
-        $("#appTime").mobiscroll(optTime).time(optTime);
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#xxw_date', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': '2050-12-31' //最大日期
     });
+    var calendardatetime = new LCalendar();
+    calendardatetime.init({
+        'trigger': '#xxw_dateTime',
+        'type': 'datetime',
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': '2050-12-31' //最大日期
+    });
+</script>
+<script>
+    $(".xxw_lessonType li").click(function () {
+        $(this).css({
+            "border-left":"1px solid #ff6000",
+            "border-right":"1px solid #ff6000"
+        })
+        if($(this).index()==1){
+            $(this).prev().css({
+                "border-left":"1px solid #eee",
+                "border-right":"none"
+            });
+            $(this).next().css({
+                "border-left":"none",
+                "border-right":"1px solid #eee"
+            })
+        }else if($(this).index()==0){
+            $(".xxw_lessonType li").eq(1).css({
+                "border-left":"none",
+                "border-right":"none"
+            })
+            $(".xxw_lessonType li").eq(2).css({
+                "border-left":"1px solid #eee",
+                "border-right":"1px solid #eee"
+            })
+        }
+        else if($(this).index()==2){
+            $(".xxw_lessonType li").eq(1).css({
+                "border-left":"none",
+                "border-right":"none"
+            })
+            $(".xxw_lessonType li").eq(0).css({
+                "border-left":"1px solid #eee",
+                "border-right":"1px solid #eee"
+            })
+        }
+        $(this).addClass("active").siblings("li").removeClass("active");
+    })
 </script>
 </body>
 </html>

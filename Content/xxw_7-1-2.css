@@ -1,6 +1,3 @@
-*{
-    -webkit-overflow-scrolling: touch;
-}
 html,body{height: 100%;}
 article{padding: 0.333rem 0.611rem;font-size: 0;overflow: auto;}
 article p{font-size: 14px;line-height: 1.444rem;}
@@ -11,23 +8,27 @@ article>img{margin: 0.333rem 0;width: 100%;}
 .xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;}
 article .xxw_slider{position:fixed;bottom:2.444rem;left:0;width: 100%;height: 2.444rem;background-color: rgba(0,0,0,0.7);padding: 0.111rem 0;}
 article .xxw_slider p{height: 1.111rem;font-size: 12px;line-height: 1.333rem;color: #fff;text-align: center;}
+article .xxw_slider p span{color: #fff;}
 article .xxw_slider .xxw_btn{width: 1.777rem;height: 1.777rem;position: absolute;top:-0.776rem;left:50%;border-radius: 50%;margin-left:-0.8885rem;text-align: center;}
 .xxw_btn .xxw_circle{width: 100%;position: absolute;top:0;left:0;}
 .xxw_btn .xxw_towards{width: 0.778rem;position: absolute;top:0.416rem;left:50%;margin-left: -0.389rem;}
-
-
-.xxw_question{width: 100%;background-color: #3c7500;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-a.edit{display: block;position:fixed;bottom:0;left:0;width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;text-align: center;line-height: 2.444rem;}
+.xxw_question{width: 100%;background-color: #fff;overflow: auto;height: 0;}
+.xxw_question li{height: 1.277rem;padding: 1rem 0.667rem;border-bottom: 1px solid #eee;}
+.xxw_question li h4{float: left;width: 1.389rem;height: 1.277rem;line-height: 1.277rem;font-weight: normal;font-size: 16px;}
+.xxw_question li.radio p,.xxw_question li.checkBox p{width: 1.15rem;height: 1.15rem;float: left;border: 1px solid #babaab;border-radius: 4px;color: #999;text-align: center;font-size: 16px;line-height: 1.222rem;margin-right: 1.111rem;}
+.xxw_question li p.active{color: #fff;background-color: #ff6000;border: 1px solid #ff6000;}
+.xxw_question li span{float: right;font-size:12px;line-height: 1.227rem;}
+.xxw_question li input{float: left;width:90%;height: 1.277rem;line-height: 1.277rem;font-size: 16px;}
+.xxw_question li i{float: right;font-size:20px;line-height: 1.227rem;color: #999;}
+.xxw_question li.TorF p{width: 2.5rem;height: 1.15rem;float: left;border: 1px solid #babaab;border-radius: 4px;color: #999;text-align: center;font-size: 14px;line-height: 1.222rem;margin-right: 1.111rem;}
+.xxw_question li.TorF p.active{color: #fff;background-color: #ff6000;border: 1px solid #ff6000;}
+a.edit{display: block;position:fixed;bottom:0;left:0;width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;text-align: center;line-height: 1.666rem;}
+a.edit p{color: #fff;font-size:0.5rem;text-align: center;line-height: 0.5rem;}
+.xxw_mask{width: 100%;height:100%;background-color: rgba(0,0,0,0.5);position: fixed;top:0;left:0;display: none;}
+.xxw_confirm{width: 75%;height: 7.777rem;background-color: #fff;position: fixed;top:50%;left:12.5%;margin-top: -3.8885rem;border-radius: 4px;overflow: hidden;display: none;}
+.xxw_mes{height: 3.445rem;border-bottom: 1px solid #d2d3d5;text-align: center;padding-top: 1.555rem;}
+.xxw_mes h3{margin-bottom: 0.888rem;line-height: 1rem;font-size:1rem;font-weight: normal;}
+.xxw_mes p{font-size: 14px;line-height: 14px;}
+.xxw_confirm button{background-color:#fff;width:49%;height: 2.777rem;font-size: 18px;}
+.xxw_confirm button:nth-child(2){border-right: 1px solid #d2d3d5;}
+.xxw_confirm button:nth-child(3){color: #ff6000;}

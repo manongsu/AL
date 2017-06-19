@@ -1,0 +1,17 @@
+.xxw_tabList{width: 100%;height: 2.305rem;background-color: #fff;border-bottom: 1px solid #eee;position: fixed;top:0;left:0;}
+.xxw_tabList li{width: 50%;float: left;line-height: 2.305rem;text-align: center;}
+.xxw_tabList li p{font-size: 1rem;}
+.xxw_tabList li span{font-size:0.667rem;font-weight: bold;color: #999;}
+.xxw_tabList li.active p,.xxw_tabList li.active p span{color: #ff6000;}
+.xxw_tabList div{width: 50%;height: 4px;position: absolute;bottom:-1px;left:0;background-color: #ff6000;}
+.xxw_contentList{padding-top: 2.4rem;}
+.xxw_contentList:nth-child(3) p.xxw_mark{line-height: 1.8rem;color: #333;}
+.xxw_workList{background-color: #fff;}
+.xxw_workList li{height: 1.8rem;padding:0.725rem 0 0.725rem 0.667rem;}
+.xxw_workList li img{float: left;height: 100%;margin-right: 0.444rem;}
+.xxw_workList li div{border-bottom: 1px solid #eee;overflow: hidden;padding-bottom: 0.725rem;height: 1.8rem;}
+.xxw_workList li p.xxw_name{float: left;font-size: 16px;line-height: 1.8rem;}
+.xxw_workList li p.xxw_mark{float: right;font-size: 12px;width: 70%;text-align: right;margin-right: 0.833rem;color: #999;line-height:14px;margin-bottom: 4px;}
+.xxw_workList li p.xxw_time{float: right;font-size: 12px;width: 70%;text-align: right;margin-right: 0.833rem;color: #999;line-height:14px;}
+.xxw_workList li i{float: right;line-height: 1.8rem;margin-right: 0.667rem;}
+.xxw_no{width: 50%;margin-left:24%;margin-top: 5rem;}

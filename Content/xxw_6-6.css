@@ -3,6 +3,7 @@ form textarea{background-color: #fff;font-size: 14px;padding: 0.305rem 0.667rem;
 .xxw_upload{background-color: #fff;padding: 0.694rem 0.667rem;overflow: hidden;margin-bottom: 0.555rem;}
 .xxw_upload input{display: none;}
 .xxw_uploadBtn{width: 17%;background-color: #dfdfdf;margin-right: 3.75%;float: left;text-align: center;font-size: 14px;line-height: 14px;}
+.xxw_uploadBtn p{color: #666;}
 .xxw_uploadBtn img{height:0.777rem;margin: 0.75rem 0 0.45rem;}
 .xxw_uploadImg{width: 17%;background-color: #fff;margin-right: 3.75%;float: left;position: relative;}
 .xxw_uploadImg:last-child{margin-right: 0;}
