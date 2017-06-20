@@ -291,9 +291,9 @@ require(
             ],
             series : [
                 {
-                    name:'听课',
+                    name:'报名',
                     type:'line',
-                    stack: '听课',
+                    stack: '报名',
                     smooth:true,
                     itemStyle : {
                         normal : {
@@ -315,9 +315,9 @@ require(
                     data:[20,50,30,60,45,70,90]
                 },
                 {
-                    name:'报名',
+                    name:'听课',
                     type:'line',
-                    stack: '报名',
+                    stack: '听课',
                     smooth:true,
                     itemStyle : {
                         normal : {

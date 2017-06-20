@@ -55,6 +55,7 @@ $(function () {
         }
     });
     $(".xxw_voice p").on('touchend',function(e){
+        clearTimeout(timeOut5)
         if(flag==1){
             reset();
             success();
