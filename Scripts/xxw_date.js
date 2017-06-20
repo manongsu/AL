@@ -372,14 +372,22 @@ window.LCalendar = (function() {
                     if (yyVal == 0) {
                         minM = _self.minM - 1;
                     }
-
                     //p 当前节点前后需要展示的节点个数
                     for (var p = 0; p < maxM - minM + 1; p++) {
                         if((mmVal - minM)==p){
-                            itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + (minM + p + 1) + "</div>";
-                            xxw_date_show = xxw_date_show + (minM + p + 1) +"/";
+                            if((minM + p + 1)<10){
+                                itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + "0" + (minM + p + 1) + "</div>";
+                                xxw_date_show = xxw_date_show + "0" + (minM + p + 1) +"/";
+                            }else{
+                                itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + (minM + p + 1) + "</div>";
+                                xxw_date_show = xxw_date_show + (minM + p + 1) +"/";
+                            }
                         }else{
-                            itemStr += "<div class='tooth'>" + (minM + p + 1) + "</div>";
+                            if((minM + p + 1)<10){
+                                itemStr += "<div class='tooth'>" + "0" + (minM + p + 1) + "</div>";
+                            }else{
+                                itemStr += "<div class='tooth'>" + (minM + p + 1) + "</div>";
+                            }
                         }
                     }
                     date_mm.innerHTML = itemStr;
@@ -415,10 +423,19 @@ window.LCalendar = (function() {
                     }
                     for (var p = 0; p < maxD - minD + 1; p++) {
                         if((ddVal - minD)==p){
-                            itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + (minD + p + 1) + "</div>";
-                            xxw_date_show = xxw_date_show + (minD + p + 1);
+                            if((minD + p + 1)<10){
+                                itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + "0" + (minD + p + 1) + "</div>";
+                                xxw_date_show = xxw_date_show + "0" + (minD + p + 1);
+                            }else{
+                                itemStr += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + (minD + p + 1) + "</div>";
+                                xxw_date_show = xxw_date_show + (minD + p + 1);
+                            }
                         }else{
-                            itemStr += "<div class='tooth'>" + (minD + p + 1) + "</div>";
+                            if((minD + p + 1)<10){
+                                itemStr += "<div class='tooth'>" + "0" + (minD + p + 1) + "</div>";
+                            }else{
+                                itemStr += "<div class='tooth'>" + (minD + p + 1) + "</div>";
+                            }
                         }
                     }
                     date_dd.innerHTML = itemStr;
@@ -446,10 +463,19 @@ window.LCalendar = (function() {
                     var hhVal = parseInt(time_hh.getAttribute("val"));
                     for (var g = 0; g <= 23; g++) {
                         if(hhVal==g){
-                            i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" +g + "</div>";
-                            xxw_time_show += " "+ g + ":";
+                            if(g<10){
+                                i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + "0" + g + "</div>";
+                                xxw_time_show += " "+ "0" + g + ":";
+                            }else{
+                                i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + g + "</div>";
+                                xxw_time_show += " "+ g + ":";
+                            }
                         }else{
-                            i += "<div class='tooth'>" + g + "</div>";
+                            if(g<10){
+                                i += "<div class='tooth'>" + "0" + g + "</div>";
+                            }else{
+                                i += "<div class='tooth'>" + g + "</div>";
+                            }
                         }
                     }
                     time_hh.innerHTML = i;
@@ -464,10 +490,19 @@ window.LCalendar = (function() {
                     var mmVal = parseInt(time_mm.getAttribute("val"));
                     for (var g = 0; g <= 59; g++) {
                         if(mmVal==g){
-                            i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + g + "</div>";
-                            xxw_time_show += g;
+                            if(g<10){
+                                i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + "0" + g + "</div>";
+                                xxw_time_show += "0" + g;
+                            }else{
+                                i += "<div class='tooth' style='color: #ff6000;height: 2.75rem;line-height: 2.75rem;'>" + g + "</div>";
+                                xxw_time_show += g;
+                            }
                         }else{
-                            i += "<div class='tooth'>" + g + "</div>";
+                            if(g<10){
+                                i += "<div class='tooth'>" + "0" + g + "</div>";
+                            }else{
+                                i += "<div class='tooth'>" + g + "</div>";
+                            }
                         }
                     }
                     time_mm.innerHTML = i;
@@ -578,25 +613,30 @@ window.LCalendar = (function() {
                 clearInterval(target["int_" + target.id]);
                 target["int_" + target.id] = setInterval(function() {
                     var pos = target["pos_" + target.id];
+                    pos = Math.ceil(pos/1.757)*1.757;
                     var speed = target["spd_" + target.id] * Math.exp(-0.03 * d);
                     pos += speed;
                     if (Math.abs(speed) > 0.1) {} else {
                         setDuration();
                     }
-                    if (pos > 8) {
-                        pos = 8;
-                        setDuration();
-                    }
                     pos = Math.ceil(pos/1.757)*1.757;
                     switch (target.dataset.datetype) {
                         case "date_yy":
-                            var minTop = 8 - (passY - 1) * 2;
+                            var minTop = 0 - (passY - 3) * 1.757;
+                            var maxTop = 3.514;
                             if (pos < minTop) {
                                 pos = minTop;
                                 setDuration();
                             }
+                            if (pos > maxTop) {
+                                pos = maxTop;
+                                setDuration();
+                            }
                             if (stopGear) {
                                 var gearVal = Math.abs(pos) / 1.757;
+                                if(pos>0){
+                                    gearVal = -gearVal;
+                                }
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -605,7 +645,7 @@ window.LCalendar = (function() {
                             var date_yy = _self.gearDate.querySelector(".date_yy");
                             //得到年份的值
                             var yyVal = parseInt(date_yy.getAttribute("val"));
-                            var maxM = 11;
+                            var maxM = 12;
                             var minM = 0;
                             //当年份到达最大值
                             if (yyVal == passY - 1) {
@@ -615,13 +655,21 @@ window.LCalendar = (function() {
                             if (yyVal == 0) {
                                 minM = _self.minM - 1;
                             }
-                            var minTop = 8 - (maxM - minM) * 2;
+                            var minTop = -15.813;
+                            var maxTop = 3.514;
                             if (pos < minTop) {
                                 pos = minTop;
                                 setDuration();
                             }
+                            if (pos > maxTop) {
+                                pos = maxTop;
+                                setDuration();
+                            }
                             if (stopGear) {
                                 var gearVal = Math.abs(pos) / 1.757 + minM;
+                                if(pos>0){
+                                    gearVal = -gearVal;
+                                }
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
@@ -645,42 +693,63 @@ window.LCalendar = (function() {
                             if (yyVal == 0 && _self.minM == mmVal + 1) {
                                 minD = _self.minD - 1;
                             }
-                            var minTop = 8 - (maxD - minD) * 2;
+                            var minTop = 0 - (maxD - minD-2) * 1.757;
+                            var maxTop = 3.514;
                             if (pos < minTop) {
                                 pos = minTop;
                                 setDuration();
                             }
+                            if (pos > maxTop) {
+                                pos = maxTop;
+                                setDuration();
+                            }
                             if (stopGear) {
                                 var gearVal = Math.abs(pos) / 1.757 + minD;
+                                if(pos>0){
+                                    gearVal = -gearVal;
+                                }
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
                             break;
                         case "time_hh":
-                            if (pos < -38) {
-                                pos = -38;
+                            if (pos < -(21*1.757)) {
+                                pos = -(21*1.757);
+                                setDuration();
+                            }
+                            if (pos > (2*1.757)) {
+                                pos = (2*1.757);
                                 setDuration();
                             }
                             if (stopGear) {
                                 var gearVal = Math.abs(pos) / 1.757;
+                                if(pos>0){
+                                    gearVal = -gearVal;
+                                }
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
                             break;
                         case "time_mm":
-                            if (pos < -110) {
-                                pos = -110;
+                            if (pos < -(57*1.757)) {
+                                pos = -(57*1.757);
+                                setDuration();
+                            }
+                            if (pos > (2*1.757)) {
+                                pos = (2*1.757);
                                 setDuration();
                             }
                             if (stopGear) {
                                 var gearVal = Math.abs(pos) / 1.757;
+                                if(pos>0){
+                                    gearVal = -gearVal;
+                                }
                                 setGear(target, gearVal);
                                 clearInterval(target["int_" + target.id]);
                             }
                             break;
                         default:
                     }
-
                     target["pos_" + target.id] = pos;
                     target.style["-webkit-transform"] = 'translate3d(0,' + pos + 'rem,0)';
                     target.setAttribute('top', pos + 'rem');
@@ -690,6 +759,9 @@ window.LCalendar = (function() {
             //控制插件滚动后停留的值
             function setGear(target, val) {
                 val = Math.round(val)+2;
+                if(val<10){
+                    val = "0" + val
+                }
                 target.setAttribute("val", val);
                 if (/date/.test(target.dataset.datetype)) {
                     setDateGearTooth();
