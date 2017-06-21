@@ -112,7 +112,6 @@
             });
             /*按下并移动*/
             $(".xxw_slider").on('touchmove',function(e){
-                move = 1;
                 e.preventDefault();
                 var $touch = e.originalEvent.targetTouches[0];
                 y2 = $touch.pageY;
@@ -121,13 +120,14 @@
                 if(status == 0){
                     /*向上滑动*/
                     if(y2<y1){
-                        if(distance<=20){
+                        if(distance<=5){
                             flag = 0;
                             bottom = 2.444*parseInt($("body").css("fontSize").replace("px",""))+distance;
                             $(this).css("bottom",bottom+"px");
                             $("article").css("height",totalHeight-distance);
                             $(".xxw_question").css("height",distance);
                         }else if(distance>5){
+                            move = 1;
                             flag = 1;
                         }
                     }
@@ -141,6 +141,7 @@
                             $("article").css("height",totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))-distance);
                             $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+distance);
                         }else if(distance<-5){
+                            move = 1;
                             flag = 1;
                         }
                     }
