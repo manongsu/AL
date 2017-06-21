@@ -41,16 +41,17 @@
         <li><img class="play" src="../Images/7-1/xxw_listen.png" alt=""/><img class="play" src="../Images/7-1/xxw_listen.gif" style="display:none;" alt=""></li>
     </ul>
 </article>
-<div class="xxw_slider">
-    <div class="xxw_btn">
-        <img class="xxw_circle" src="../Images/7-1/xxw_circle.png" alt=""/>
-        <img class="xxw_towards" src="../Images/7-1/xxw_top.png" alt=""/>
-        <img class="xxw_towards" src="../Images/7-1/xxw_down.png" alt="" style="display: none;"/>
-    </div>
-    <p class="xxw_tips">请向<span>上</span><span style="display: none;">下</span>拨动此处进行答题</p>
-    <p>按照老师指定的出题顺序依次作答</p>
-</div>
+
 <div class="xxw_question">
+    <div class="xxw_slider">
+        <div class="xxw_btn">
+            <img class="xxw_circle" src="../Images/7-1/xxw_circle.png" alt=""/>
+            <img class="xxw_towards" src="../Images/7-1/xxw_top.png" alt=""/>
+            <img class="xxw_towards" src="../Images/7-1/xxw_down.png" alt="" style="display: none;"/>
+        </div>
+        <p class="xxw_tips">请向<span>上</span><span style="display: none;">下</span>拨动此处进行答题</p>
+        <p>按照老师指定的出题顺序依次作答</p>
+    </div>
     <ul>
         <li class="radio">
             <h4>1、</h4>
@@ -123,9 +124,10 @@
                         if(distance<=5){
                             flag = 0;
                             bottom = 2.444*parseInt($("body").css("fontSize").replace("px",""))+distance;
-                            $(this).css("bottom",bottom+"px");
+                            $(this).css("top",-"2.666rem");
                             $("article").css("height",totalHeight-distance);
                             $(".xxw_question").css("height",distance);
+                            $(".xxw_question ul").css("height",distance);
                         }else if(distance>5){
                             move = 1;
                             flag = 1;
@@ -137,9 +139,10 @@
                         if(distance>=-5){
                             flag = 0;
                             bottom = 16.91*parseInt($("body").css("fontSize").replace("px",""))+distance;
-                            $(this).css("bottom",bottom+"px");
+                            $(this).css("top",-"2.666rem");
                             $("article").css("height",totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))-distance);
                             $(".xxw_question").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+distance);
+                            $(".xxw_question ul").css("height",14.472*parseInt($("body").css("fontSize").replace("px",""))+distance);
                         }else if(distance<-5){
                             move = 1;
                             flag = 1;
@@ -150,12 +153,15 @@
             /*滑块运动到0状态*/
             function status0($this,time) {
                 $this.animate({
-                    "bottom":"2.444rem"
+                    "top":"-2.666rem"
                 },time);
                 $("article").animate({
                     "height":totalHeight
                 },time);
                 $(".xxw_question").animate({
+                    "height":"0px"
+                },time);
+                $(".xxw_question ul").animate({
                     "height":"0px"
                 },time);
                 $(".xxw_towards").toggle();
@@ -164,12 +170,15 @@
             /*滑块运动到1状态*/
             function status1($this,time) {
                 $this.animate({
-                    "bottom":"16.916rem"
+                    "top":"-2.666rem"
                 },time);
                 $("article").animate({
                     "height":totalHeight-14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
                 },time);
                 $(".xxw_question").animate({
+                    "height":14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
+                },time);
+                $(".xxw_question ul").animate({
                     "height":14.472*parseInt($("body").css("fontSize").replace("px",""))+"px"
                 },time);
                 $(".xxw_towards").toggle();
