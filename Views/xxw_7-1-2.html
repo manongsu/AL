@@ -95,7 +95,7 @@
 </div>
 <script type="text/javascript" src="../Scripts/jquery.1.9.1.js"></script>
 <script type="text/javascript">
-    $(function () {
+    function load() {
         /*根据屏幕的高度设置article的高度*/
         var totalHeight = $("body").height()-$(".edit").height()-parseInt($("article").css("paddingTop").replace("px","")*2+1);
         $("article").css("height",totalHeight);
@@ -207,12 +207,18 @@
             })
         }
         xxw_slider();
+    }
+    $(function () {
+        load();
         $(document).on("click",".xxw_voice li",function () {
             $(this).children(".play").toggle();
             $(this).siblings("li").children(".play:nth-child(1)").css("display","block");
             $(this).siblings("li").children(".play:nth-child(2)").css("display","none");
         })
-    })
+    });
+    $(window).resize(function () {
+        load();
+    });
 </script>
 <script type="text/javascript">
     $(function () {

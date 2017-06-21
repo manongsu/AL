@@ -46,7 +46,9 @@
         <img src="../Images/6-3/xxw_folder.png" alt=""/><p>上传资料</p>
     </div>
     <div class="xxw_operateBtn" style="border-bottom: 1px solid #eee;margin-bottom:0;">
-        <img src="../Images/6-3/xxw_homework.png" alt=""/><p>创建作业</p>
+        <a href="xxw_6-6.html">
+            <img src="../Images/6-3/xxw_homework.png" alt=""/><p>创建作业</p>
+        </a>
     </div>
     <div class="xxw_operateBtn">
         <img src="../Images/6-3/xxw_answer.png" alt=""/><p>设置答题卡</p>
@@ -77,16 +79,7 @@
             "border-left":"1px solid #ff6000",
             "border-right":"1px solid #ff6000"
         })
-        if($(this).index()==1){
-            $(this).prev().css({
-                "border-left":"1px solid #eee",
-                "border-right":"none"
-            });
-            $(this).next().css({
-                "border-left":"none",
-                "border-right":"1px solid #eee"
-            })
-        }else if($(this).index()==0){
+        if($(this).index()==0){
             $(".xxw_lessonType li").eq(1).css({
                 "border-left":"none",
                 "border-right":"none"
@@ -95,8 +88,23 @@
                 "border-left":"1px solid #eee",
                 "border-right":"1px solid #eee"
             })
+            $(".xxw_newLesson>li").eq(3).css("display","block");
+            $(".xxw_newLesson>li").eq(4).css("display","block");
+            $(".xxw_newLesson>li").eq(5).css("display","block");
         }
-        else if($(this).index()==2){
+        else if($(this).index()==1){
+            $(this).prev().css({
+                "border-left":"1px solid #eee",
+                "border-right":"none"
+            });
+            $(this).next().css({
+                "border-left":"none",
+                "border-right":"1px solid #eee"
+            })
+            $(".xxw_newLesson>li").eq(3).css("display","block");
+            $(".xxw_newLesson>li").eq(4).css("display","block");
+            $(".xxw_newLesson>li").eq(5).css("display","block");
+        }else if($(this).index()==2){
             $(".xxw_lessonType li").eq(1).css({
                 "border-left":"none",
                 "border-right":"none"
@@ -104,7 +112,10 @@
             $(".xxw_lessonType li").eq(0).css({
                 "border-left":"1px solid #eee",
                 "border-right":"1px solid #eee"
-            })
+            });
+            $(".xxw_newLesson>li").eq(3).css("display","none");
+            $(".xxw_newLesson>li").eq(4).css("display","none");
+            $(".xxw_newLesson>li").eq(5).css("display","none");
         }
         $(this).addClass("active").siblings("li").removeClass("active");
     })

@@ -1,5 +1,5 @@
-.xxw_viewQues{display:block;background-color: #fff;height: 2.444rem;text-align: center;line-height: 2.7rem;font-size: 18px;}
-.xxw_viewQues i{float: right;font-size: 24px;color: #999;margin: 0.555rem 0.667rem;}
+.xxw_viewQues{display:block;background-color: #fff;height: 2.444rem;text-align: center;line-height: 2.7rem;font-size: 18px;position: relative;}
+.xxw_viewQues i{float: right;font-size: 24px;color: #999;position: absolute;top:0.555rem;right: 0.667rem;}
 article[xxw_type = "4"]{padding: 0.333rem 0.611rem 9.861rem;font-size: 0;background-color: #fff;}
 article[xxw_type = "4"] p{font-size: 14px;line-height: 1.444rem;}
 article[xxw_type = "4"]>img{margin: 0.333rem 0;width: 100%;}
