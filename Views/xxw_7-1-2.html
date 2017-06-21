@@ -100,9 +100,10 @@
         $("article").css("height",totalHeight);
         /*拖动指定块*/
         function xxw_slider() {
-            var y1;
+            var y1;var y2;
             var flag = 0;/*用于判断滑动的距离, 大于50为1,小于等于为0*/
             var status = 0;/*用于判断滑块的位置，0为底部，1为中间*/
+            var move = 0;
             /*手指按下*/
             $(".xxw_slider").on('touchstart',function(e){
                 e.preventDefault();
@@ -111,9 +112,10 @@
             });
             /*按下并移动*/
             $(".xxw_slider").on('touchmove',function(e){
+                move = 1;
                 e.preventDefault();
                 var $touch = e.originalEvent.targetTouches[0];
-                var y2 = $touch.pageY;
+                y2 = $touch.pageY;
                 var distance = y1-y2;
                 var bottom;
                 if(status == 0){
@@ -174,20 +176,23 @@
             }
             $(".xxw_slider").on('touchend',function(e){
                 e.preventDefault();
-                if(status == 0){
-                    if(flag==0){
-                        status0($(this),200);
-                    }else if(flag==1){
-                        status1($(this),500)
-                        flag = 0;status = 1;
+                if(move==1){
+                    if(status == 0){
+                        if(flag==0){
+                            status0($(this),200);
+                        }else if(flag==1){
+                            status1($(this),500)
+                            flag = 0;status = 1;
+                        }
+                    }else if(status == 1){
+                        if(flag==0){
+                            status1($(this),200);
+                        }else if(flag==1){
+                            status0($(this),500);
+                            flag = 0;status = 0;
+                        }
                     }
-                }else if(status == 1){
-                    if(flag==0){
-                        status1($(this),200);
-                    }else if(flag==1){
-                        status0($(this),500);
-                        flag = 0;status = 0;
-                    }
+                    move = 0;
                 }
             })
         }
