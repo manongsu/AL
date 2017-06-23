@@ -36,7 +36,7 @@ article[xxw_type = "3"]  .xxw_trueAnswer span{color: #08bb07;font-size: 16px;lin
 .xxw_voice{height:1.389rem;margin-top: 0.333rem;}
 .xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;}
 .xxw_voice li:last-child{margin-right: 0;}
-.xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;}
+.xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;cursor: pointer;}
 .xxw_fixed{position: fixed;bottom:0;left:0;width: 100%;}
 .xxw_quesNum{height: 3.224rem;background-color: rgba(0,0,0,0.7);padding: 0.888rem 0.667rem;}
 .xxw_quesNum li{height:1.277rem;float: left;width: 100%;}
