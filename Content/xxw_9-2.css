@@ -34,7 +34,7 @@ article[xxw_type = "3"]  .xxw_stuAnswer p img{width: 0.888rem;height:  0.888rem;
 article[xxw_type = "3"]  .xxw_trueAnswer{background-color: #fff;padding: 1rem 0.667rem;height: 1.227rem;}
 article[xxw_type = "3"]  .xxw_trueAnswer span{color: #08bb07;font-size: 16px;line-height: 1.227rem;}
 .xxw_voice{height:1.389rem;margin-top: 0.333rem;}
-.xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;}
+.xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;cursor: pointer;}
 .xxw_voice li:last-child{margin-right: 0;}
 .xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;cursor: pointer;}
 .xxw_fixed{position: fixed;bottom:0;left:0;width: 100%;}

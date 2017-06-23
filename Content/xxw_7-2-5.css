@@ -2,7 +2,7 @@ article{padding: 0.333rem 0.611rem;font-size: 0;background-color: #fff;}
 article p{font-size: 14px;line-height: 1.444rem;}
 article>img{margin: 0.333rem 0;width: 100%;}
 .xxw_voice{height:1.389rem;margin-top: 0.333rem;margin-bottom: 1.054rem;}
-.xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;}
+.xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;cursor: pointer;}
 .xxw_voice li:last-child{margin-right: 0;}
 .xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;cursor: pointer;}
 a.edit{display: block;position:fixed;bottom:0;left:0;width: 100%;height: 2.444rem;background-color: #ff6000;color: #fff;font-size: 1rem;text-align: center;line-height: 2.444rem;}

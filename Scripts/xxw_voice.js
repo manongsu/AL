@@ -61,7 +61,8 @@ $(function () {
             success();
         }
     });
-    $(document).on("click",".xxw_voice i",function () {
+    $(document).on("click",".xxw_voice i",function (e) {
+        e.stopPropagation();
         $(this).parent().remove();
         $(this).parent().detach();
         if($(".xxw_voice li").length==0){
