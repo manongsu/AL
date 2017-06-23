@@ -15,7 +15,7 @@ form textarea{background-color: #fff;font-size: 14px;padding: 0.305rem 0.667rem;
 .xxw_voice li{width: 17%;height:1.389rem;background-color: #ff6000;margin-right: 3.75%;float: left;border-radius: 4px;position: relative;}
 .xxw_voice li:last-child{margin-right: 0;}
 .xxw_voice li>img{height: 72%;margin-top:6%;margin-left: 0.5rem;}
-.xxw_voice li i{position: absolute;top:-10px;right:-10px;z-index: 9;display: block;width: 20px;height:20px;background-color: rgba(0,0,0,0);color: #fff;line-height: 14px;text-align: center;border-radius: 3px;}
+.xxw_voice li i{position: absolute;top:-10px;right:-10px;z-index: 9;display: block;width: 20px;height:20px;background-color: rgba(0,0,0,0);color: #fff;line-height: 14px;text-align: center;border-radius: 3px;cursor: pointer;}
 .xxw_voice li i img{width: 60%;vertical-align: middle;background-color: #dfdfdf;border-radius: 3px;margin-top: 20%;}
 .xxw_voice p{height: 2.389rem;font-size: 18px;text-align:center;line-height: 2.389rem;border: 1px solid #ff6000;border-radius: 4px;color: #ff6000;}
 .xxw_speak{position: absolute;top:50%;left:50%;width: 8.34rem;height: 8.34rem;margin-top: -4.17rem;margin-left: -4.17rem;background-color: rgba(0,0,0,0.6);text-align: center;z-index: 99;border-radius: 4px;display: none;}
