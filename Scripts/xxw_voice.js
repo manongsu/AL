@@ -63,6 +63,7 @@ $(function () {
     });
     $(document).on("click",".xxw_voice i",function () {
         $(this).parent().remove();
+        $(this).parent().detach();
         if($(".xxw_voice li").length==0){
             $(".xxw_voice ul").css("display","none");
         }

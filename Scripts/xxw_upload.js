@@ -18,6 +18,7 @@ $(function () {
     $(document).on("click",".xxw_uploadImg i",function () {
         docObj.outerHTML=docObj.outerHTML;
         $(this).parent().remove();
+        $(this).parent().detach();
         if($(".xxw_uploadImg").length<5){
             $(".xxw_uploadBtn").css("display","block");
         }
